@@ -1,19 +1,23 @@
 #include <cstdio>
 
-int power( int x, int n ) {
+float power( float x, int n ) {
     if( !n ) {
         return 1;
     }
-    int temp = power( x, n / 2 );
+    float temp = power( x, n / 2 );
     if( n % 2 ) {
-        return x * temp * temp;
+        if( n > 0 ) {
+            return x * temp * temp;
+        } else {
+            return temp * temp / x;
+        }
     }
     return temp * temp;
 }
 
 int main() {
-    int x = 5;
-    int n = 2;
-    printf( "%d\n", power( x, n ) );
+    float x = 5.2;
+    int n = -2;
+    printf( "%f\n", power( x, n ) );
     return 0;
 }
