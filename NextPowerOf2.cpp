@@ -1,3 +1,5 @@
+// Problem Statement: http://www.geeksforgeeks.org/next-power-of-2/
+
 #include <iostream>
 #include <cassert>
 
