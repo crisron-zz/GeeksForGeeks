@@ -36,6 +36,9 @@ $(OBJ)%.o : $(SOURCES)
 # Don't remove intermediate object files
 .PRECIOUS : $(OBJECTS)
 
+make_dirs:
+	mkdir -p $(OBJ) $(BIN)
+
 clean :
 	-rm $(OBJECTS)
 	-rm $(BINS)
