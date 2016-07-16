@@ -1,0 +1,16 @@
+language: cpp
+
+compiler:
+- clang
+- gcc
+
+os:
+- linux
+- osx
+
+install: make
+
+script: bin/* 
+
+notifications:
+    email: false
