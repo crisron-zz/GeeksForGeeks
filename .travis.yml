@@ -8,7 +8,7 @@ os:
 - linux
 - osx
 
-before_install: make make_dirs
+before_install: make make_dirs && make clean
 
 install: make
 
