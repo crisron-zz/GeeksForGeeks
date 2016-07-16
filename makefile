@@ -39,6 +39,9 @@ $(OBJ)%.o : $(SOURCES)
 make_dirs:
 	mkdir -p $(OBJ) $(BIN)
 
+clean_obj:
+	-rm $(OBJECTS)
+
 clean :
 	-rm $(OBJECTS)
 	-rm $(BINS)
