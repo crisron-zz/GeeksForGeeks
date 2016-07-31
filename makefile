@@ -1,5 +1,10 @@
+# Contains header files
+INCLUDE = include/
+# Names of all the header files
+INCLUDES := $(wildcard $(INCLUDE)*.h)
+
 # Compile with all the warnings on
-CXXFLAGS = -Wall
+CXXFLAGS = -Wall -I$(INCLUDE)
 # Link the math library
 LDFLAGS = -lm
 
@@ -30,7 +35,7 @@ $(BIN)% : $(OBJECTS)
 	$(CXX) $(OBJFILE) $(LDFLAGS) -o $(BINFILE)
 
 # Rule to make object files
-$(OBJ)%.o : $(SOURCES)
+$(OBJ)%.o : $(SOURCES) $(INCLUDES)
 	$(CXX) $(SRCFILE) $(CXXFLAGS) -c -o $(OBJFILE)
 
 # Don't remove intermediate object files

@@ -1,21 +1,9 @@
 #include <iostream>
 #include <cassert>
 
+#include "TreeHelper.h"
+
 using namespace std;
-
-struct node {
-    int data;
-    struct node* left;
-    struct node* right;
-};
-
-struct node* newNode( int data ) {
-    struct node *root = new node;
-    root->data = data;
-    root->left = NULL;
-    root->right = NULL;
-    return root;
-}
 
 bool isIdentical( struct node* root1, struct node* root2 ) {
     if( !root1 ) {

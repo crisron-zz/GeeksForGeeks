@@ -2,26 +2,12 @@
 #include <cassert>
 #include <exception>
 
+#include "TreeHelper.h"
+
 #define SUCCESS 1
 #define FAILURE 0
 
 using namespace std;
-
-// TODO: Push this into a common header file
-struct node {
-    int data;
-    struct node* left;
-    struct node* right;
-};
-
-// TODO: Push this into a common header file
-struct node* newNode( int data ) {
-    struct node* root = new node;
-    root->data = data;
-    root->left = NULL;
-    root->right = NULL;
-    return root;
-}
 
 bool isLeaf( struct node* root ) {
     return ( !root->left && !root->right );
