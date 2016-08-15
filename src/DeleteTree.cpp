@@ -9,10 +9,6 @@
 
 using namespace std;
 
-bool isLeaf( struct node* root ) {
-    return ( !root->left && !root->right );
-}
-
 bool deleteTree( struct node* root ) {
     if( !root ) {
         return SUCCESS;
