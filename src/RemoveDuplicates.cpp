@@ -22,6 +22,10 @@ void removeDuplicates( string& str ) {
 int main() {
     string str;
 
+    str = "aaaaaa";
+    removeDuplicates( str );
+    assert( str == "a" );
+
     str = "abcdef";
     removeDuplicates( str );
     assert( str == "abcdef" );
