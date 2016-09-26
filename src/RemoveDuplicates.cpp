@@ -7,6 +7,8 @@
 
 using namespace std;
 
+// erase() - Time complexity is O( n )
+// removeDuplicates - Time complexity O( n^2 )
 void removeDuplicates( string& str ) {
     bool hash[ MAX_CHARS ] = { 0 };
     for( int i = 0; i < str.length(); i++ ) {
