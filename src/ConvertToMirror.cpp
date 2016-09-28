@@ -5,21 +5,6 @@
 
 using namespace std;
 
-// Return true if mirrorRoot is a mirror of root
-bool isMirror( struct node* mirrorRoot, struct node* root ) {
-    if( !mirrorRoot && !root ) {
-        return true;
-    }
-    if( ( !mirrorRoot && root ) || ( mirrorRoot && !root ) ) {
-        return false;
-    }
-    if( mirrorRoot->data != root->data ) {
-        return false;
-    }
-    return ( isMirror( mirrorRoot->left, root->right ) &&
-             isMirror( mirrorRoot->right, root->left ) );
-}
-
 void convertToMirror( struct node* root, struct node*& mirrorRoot ) {
     if( !root ) {
         return;
