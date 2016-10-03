@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <cassert>
+#include <algorithm>
 
 #define MAX_CHARS 256
 
